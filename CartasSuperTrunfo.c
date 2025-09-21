@@ -4,7 +4,7 @@
 int main() {
   // Variáveis carta 1
   char estado1;                       // Estado de A até H
-  char codigo1[4];                    // código da carta
+  char codigo1[5];                    // código da carta
   char nomeCidade1[40];               // Nome da cidade até 40 caractere
   int populacao1;                     // População da cidade, número inteiro
   float area1;                        // Área em km²
@@ -13,7 +13,7 @@ int main() {
 
   // carta 2
   char estado2;                       // Estado de A até H
-  char codigo2[4];                    // Código da carta
+  char codigo2[5];                    // Código da carta
   char nomeCidade2[40];               // Nome da cidade até 40 caractere
   int populacao2;                     // População da cidade, número inteiro    
   float area2;                        // Área em km²
@@ -26,28 +26,49 @@ int main() {
 
 
 printf("Digite o estado da carta 1 (A-H): \n");
-scanf( "%c", &estado1); // lê 1 caractere
+scanf( " %s", &estado1); // lê 1 caractere
 
 printf("Digite o código da carta 1: \n");
-scanf("%c", &codigo1); // lê strins sem espaços
+scanf(" %s", codigo1); // lê strins sem espaços
 
 printf("Digite o nome da cidade 1: \n");
-scanf("%c", &nomeCidade1);
+scanf(" %s", &nomeCidade1);
 
 printf("Digite a população da cidade 1: \n");
-scanf("%d", &populacao1); // lê número inteiro
+scanf(" %d", &populacao1); // lê número inteiro
 
-
-printf("Digite a area da cidade1(km²): \n");
-scanf("%f", &area1);      // lê número decimal
+printf("Digite a area da cidade 1(km²): \n");
+scanf(" %f", &area1);      // lê número decimal
 
 printf("Digite o PIB da cidade 1: \n");
-scanf("%f", &pib1);       // lê número decimal
+scanf(" %f", &pib1);       // lê número decimal
 
 printf("Digite o numero de pontos turisticos 1: \n");
-scanf("%d", &numeroPontosTuristicos1); // lê número inteiro
+scanf(" %d", &numeroPontosTuristicos1); // lê número inteiro
 
 
+// Entrada de dados carta 2
+
+printf("\nDigite o estado da carta 2 (A-H): \n");
+scanf(" %s", &estado2);
+
+printf("Digite o codigo da carta 2 (ex: B01): \n");
+scanf("%s", codigo2);
+
+printf("Digite o nome da cidade da carta 2: \n");
+scanf(" %s", &nomeCidade2);
+
+printf("Digite a populacao da cidade 2: \n");
+scanf(" %d", &populacao2);
+
+printf("Digite a area da cidade 2 (km²): \n");
+scanf(" %f", &area2);
+
+printf("Digite o PIB da cidade 2: \n");
+scanf(" %f", &pib2);
+
+printf("Digite o numero de pontos turisticos: ");
+scanf(" %d", &numeroPontosTuristicos2);
 
 
   
