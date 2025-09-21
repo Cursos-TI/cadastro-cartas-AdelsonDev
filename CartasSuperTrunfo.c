@@ -5,7 +5,7 @@ int main() {
   // Variáveis carta 1
   char estado1;                       // Estado de A até H
   char codigo1[5];                    // código da carta
-  char nomeCidade1[40];               // Nome da cidade até 40 caractere
+  char nomeCidade1[41];               // Nome da cidade até 40 caractere
   int populacao1;                     // População da cidade, número inteiro
   float area1;                        // Área em km²
   float pib1;                         // produto interno bruto da cidade, número decimal
@@ -14,7 +14,7 @@ int main() {
   // carta 2
   char estado2;                       // Estado de A até H
   char codigo2[5];                    // Código da carta
-  char nomeCidade2[40];               // Nome da cidade até 40 caractere
+  char nomeCidade2[41];               // Nome da cidade até 40 caractere
   int populacao2;                     // População da cidade, número inteiro    
   float area2;                        // Área em km²
   float pib2;                         // Produto interno bruto da cidade, número decimal   
@@ -26,7 +26,7 @@ int main() {
 
 
 printf("Digite o estado da carta 1 (A-H): \n");
-scanf( " %s", &estado1); // lê 1 caractere
+scanf( " %s", &estado1); // lê strings sem espaços
 
 printf("Digite o código da carta 1: \n");
 scanf(" %s", codigo1); // lê strins sem espaços
@@ -41,7 +41,7 @@ printf("Digite a area da cidade 1(km²): \n");
 scanf(" %f", &area1);      // lê número decimal
 
 printf("Digite o PIB da cidade 1: \n");
-scanf(" %f", &pib1);       // lê número decimal
+scanf(" %f", &pib1);      
 
 printf("Digite o numero de pontos turisticos 1: \n");
 scanf(" %d", &numeroPontosTuristicos1); // lê número inteiro
