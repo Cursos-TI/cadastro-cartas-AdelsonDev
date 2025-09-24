@@ -70,7 +70,24 @@ scanf(" %f", &pib2);
 printf("Digite o numero de pontos turisticos: ");
 scanf(" %d", &numeroPontosTuristicos2);
 
+    // Exibindo resultados
+    printf("\n=== Carta 1 ===\n");
+    printf("Estado: %c\n", estado1);
+    printf("Codigo: %s\n", codigo1);
+    printf("Cidade: %s\n", nomeCidade1);
+    printf("Populacao: %d\n", populacao1);
+    printf("Area: %.2f km²\n", area1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Pontos: %d\n", numeroPontosTuristicos1);
 
+    printf("\n=== Carta 2 ===\n");
+    printf("Estado: %c\n", estado2);
+    printf("Codigo: %s\n", codigo2);
+    printf("Cidade: %s\n", nomeCidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area: %.2f km²\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos: %d\n", numeroPontosTuristicos2);
   
 return 0;
 } 
