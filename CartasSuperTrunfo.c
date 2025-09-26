@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 
 int main() {
   // Variáveis carta 1
@@ -24,35 +24,29 @@ int main() {
   float densidade_populacional2;
   float pib_per_capita2;
 
-  // cálculos
-
-  densidade_populacional1 = (float) populacao1 / area1;
-  pib_per_capita1 = pib1 / populacao1;
-
-  densidade_populacional2 = (float) populacao2 / area2;
-  pib_per_capita2 = pib2 / populacao2;
-
+ 
 // Entrada de dados da carta 1
 
 
 printf("Digite o estado da carta 1 (A-H): \n");
 scanf( " %c", &estado1); // lê strings sem espaços
-
+ 
 printf("Digite o código da carta 1: \n");
 scanf(" %s", codigo1); // lê strins sem espaços
-
+getchar();     
 printf("Digite o nome da cidade 1: \n");
-scanf(" %s", &nomeCidade1);
-
+fgets(nomeCidade1, sizeof(nomeCidade1), stdin);
+nomeCidade1[strcspn(nomeCidade1, "\n")] = '\0';  // remove o Enter
+getchar();
 printf("Digite a população da cidade 1: \n");
 scanf(" %d", &populacao1); // lê número inteiro
-
+getchar();
 printf("Digite a area da cidade 1(km²): \n");
 scanf(" %f", &area1);      // lê número decimal
-
+getchar();
 printf("Digite o PIB da cidade 1: \n");
 scanf(" %f", &pib1);      
-
+getchar();
 printf("Digite o numero de pontos turisticos 1: \n");
 scanf(" %d", &numeroPontosTuristicos1); // lê número inteiro
 
@@ -60,15 +54,18 @@ scanf(" %d", &numeroPontosTuristicos1); // lê número inteiro
 
 
 // Entrada de dados carta 2
-
+getchar();
 printf("\nDigite o estado da carta 2 (A-H): \n");
 scanf(" %c", &estado2);
 
-printf("Digite o codigo da carta 2 (ex: B01): \n");
+
+printf("Digite o código da carta 2 (ex: B01): \n");
 scanf("%s", codigo2);
 
+getchar();
 printf("Digite o nome da cidade da carta 2: \n");
-scanf(" %s", &nomeCidade2);
+fgets(nomeCidade2, sizeof(nomeCidade2), stdin);
+nomeCidade2[strcspn(nomeCidade2, "\n")] = '\0';
 
 printf("Digite a populacao da cidade 2: \n");
 scanf(" %d", &populacao2);
@@ -81,6 +78,15 @@ scanf(" %f", &pib2);
 
 printf("Digite o numero de pontos turisticos: ");
 scanf(" %d", &numeroPontosTuristicos2);
+getchar();
+ // cálculos
+
+  densidade_populacional1 = (float) populacao1 / area1;
+  pib_per_capita1 = pib1 / populacao1;
+
+  densidade_populacional2 = (float) populacao2 / area2;
+  pib_per_capita2 = pib2 / populacao2;
+
 
     // Exibindo resultados
     printf("\n=== Carta 1 ===\n");
